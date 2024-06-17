@@ -18,10 +18,6 @@ class SurveyResponse(models.Model):
         choices=[(1, 'SIM'), (0, 'NÃO')],
         verbose_name="Você sente que seu ambiente de trabalho é seguro e acolhedor?"
     )
-    question_5 = models.IntegerField(
-        choices=[(1, 'SIM'), (0, 'NÃO')],
-        verbose_name="Você costuma se sentir esgotado emocionalmente após o trabalho?"
-    )
     question_6 = models.IntegerField(
         choices=[(1, 'SIM'), (0, 'NÃO')],
         verbose_name="Você já precisou tirar licença médica por motivos relacionados ao estresse ou à saúde mental?"
@@ -53,6 +49,12 @@ class SurveyResponse(models.Model):
     question_13 = models.IntegerField(
         choices=[(1, 'SIM'), (0, 'NÃO')],
         verbose_name="Você já considerou mudar de profissão devido ao impacto do trabalho na sua saúde mental?"
+    )
+    predicted_class = models.IntegerField(
+        choices=[(1, 'SIM'), (0, 'NÃO')],
+        null=True,
+        blank=True,
+        verbose_name="Classe prevista pelo modelo"
     )
 
     def __str__(self):
