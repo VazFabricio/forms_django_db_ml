@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <link rel="stylesheet" type="text/css" href="../static/forms.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Survey</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id_professor_name">Professor Name:</label>
+                {{ form.professor_name }}
+            </div>
+            <div class="form-group">
+                <label for="id_question_1">Você sente que a carga de trabalho afeta negativamente sua saúde mental?</label>
+                <div class="radio-group">
+                    {{ form.question_1 }}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="id_question_2">Você acredita que recebe apoio adequado da administração escolar para lidar com o estresse?</label>
+                <div class="radio-group">
+                    {{ form.question_2 }}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="id_question_3">Você tem acesso a recursos ou programas de bem-estar oferecidos pela sua instituição?</label>
+                <div class="radio-group">
+                    {{ form.question_3 }}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="id_question_4">Você sente que seu ambiente de trabalho é seguro e acolhedor?</label>
+                <div class="radio-group">
+                    {{ form.question_4 }}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="id_question_5">Você costuma se sentir esgotado emocionalmente após o trabalho?</label>
+                <div class="radio-group">
+                    {{ form.question_5 }}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="id_question_6">Você já precisou tirar licença médica por motivos relacionados ao estresse ou à saúde mental?</label>
+                <div class="radio-group">
+                    {{ form.question_6 }}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="id_question_7">Você consegue falar abertamente sobre suas preocupações de saúde mental com seus colegas ou superiores?</label>
+                <div class="radio-group">
+                    {{ form.question_7 }}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="id_question_8">Você acredita que sua escola oferece suporte suficiente para melhorar a saúde mental dos professores?</label>
+                <div class="radio-group">
+                    {{ form.question_8 }}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="id_question_9">Você já participou de alguma palestra ou workshop sobre gestão do estresse ou saúde mental?</label>
+                <div class="radio-group">
+                    {{ form.question_9 }}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="id_question_10">Você se sente valorizado(a) e reconhecido(a) em seu ambiente de trabalho?</label>
+                <div class="radio-group">
+                    {{ form.question_10 }}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="id_question_11">Você tem tempo suficiente para cuidar da sua saúde mental e física fora do trabalho?</label>
+                <div class="radio-group">
+                    {{ form.question_11 }}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="id_question_12">Você acha que as pausas e intervalos durante o expediente são suficientes para recarregar as energias?</label>
+                <div class="radio-group">
+                    {{ form.question_12 }}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="id_question_13">Você já considerou mudar de profissão devido ao impacto do trabalho na sua saúde mental?</label>
+                <div class="radio-group">
+                    {{ form.question_13 }}
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
