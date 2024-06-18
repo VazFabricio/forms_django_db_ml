@@ -80,9 +80,9 @@ WSGI_APPLICATION = "professores_analise.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bancodeteste',
-        'USER': 'root',
-        'PASSWORD': 'data@ccess',
+        'NAME': 'bancodeteste',#NOME DO BANCO
+        'USER': 'root', #USUARIO
+        'PASSWORD': '', #SENHA DO BANCO
         'HOST': 'localhost',
         'PORT': '3306',
     }
