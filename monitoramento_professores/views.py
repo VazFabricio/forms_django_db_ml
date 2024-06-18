@@ -40,3 +40,10 @@ def survey_view(request):
 
 def success_view(request):
     return render(request, 'success.html')
+
+
+def control_panel_view(request):
+    responses = SurveyResponse.objects.all()
+    for response in responses:
+        print(response.professor_name, response.predicted_class)
+    return render(request, 'control_panel.html', {'responses': responses})

@@ -82,7 +82,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'bancodeteste',#NOME DO BANCO
         'USER': 'root', #USUARIO
-        'PASSWORD': '', #SENHA DO BANCO
+        'PASSWORD': 'data@ccess', #SENHA DO BANCO
         'HOST': 'localhost',
         'PORT': '3306',
     }

@@ -1,0 +1,27 @@
+<!-- monitoramento_professores/templates/control_panel.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel de Controle</title>
+</head>
+<body>
+    <h1>Painel de Controle</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nome do Professor</th>
+                <th>Classe Prevista</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for response in responses %}
+                <tr>
+                    <td>{{ response.professor_name }}</td>
+                    <td>{{ response.predicted_class }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
