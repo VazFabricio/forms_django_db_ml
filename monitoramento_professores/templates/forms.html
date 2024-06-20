@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey</title>
+    <title>Formulário</title>
     <link rel="stylesheet" type="text/css" href="../static/forms.css">
 </head>
 <body>
     <div class="container">
-        <h1>Survey</h1>
-        <form method="post">
+        <h1>Formulário</h1>
+        <hr>
+        <h2 class="descricao">Este trabalho consiste em realizar uma análise de dados a partir do questionário fornecido pelo Squad de Psicologia.  O objetivo é compreender o perfil dos profissionais da educação e sua relação com a presença de traços de transtornos mentais.
+            A análise busca desenvolver um modelo para identificar a probabilidade da existência desses traços entre os profissionais da educação, utilizando as respostas do questionário.</h2>
+            <hr>
+            <form method="post">
             {% csrf_token %}
             <div class="form-group">
-                <label for="id_professor_name">Professor Name:</label>
-                {{ form.professor_name }}
+                <label for="id_professor_name">Nome do Professor:</label>
+                <div class="input form-control">
+                    {{ form.professor_name }}
+                </div>                
             </div>
             <div class="form-group">
                 <label for="id_question_1">Você sente que a carga de trabalho afeta negativamente sua saúde mental?</label>
@@ -87,7 +93,7 @@
                     {{ form.question_13 }}
                 </div>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit">Enviar</button>
         </form>
     </div>
 </body>

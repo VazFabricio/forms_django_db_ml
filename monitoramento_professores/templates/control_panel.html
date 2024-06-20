@@ -1,11 +1,37 @@
-<!-- monitoramento_professores/templates/control_panel.html -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <title>Painel de Controle</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .containner {
+    max-width: 700px;
+    margin: 20px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+    </style>
 </head>
 <body>
+    <div class="containner">
     <h1>Painel de Controle</h1>
     <table border="1">
         <thead>
@@ -23,5 +49,6 @@
             {% endfor %}
         </tbody>
     </table>
+</div>
 </body>
 </html>
